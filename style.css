@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+.navbar-container{
+    align-items: center;
+    display: flex;
+    /* background-color: green; */
+    padding: 0 50px;
+    height: 100%;
+}
+.logo{
+    flex: 3;
+    font-size: 1.6em;
+    /* background-color: teal; */
+}
+.menu{
+    flex: 5;
+    /* background-color: burlywood; */
+}
+.menulist{
+    display: flex;
+    list-style: none;
+}
+.menulist-item{
+    margin-right: 30px;
+    border: 2px solid black;
+    
+}
+.menulist-item a{
+    text-decoration: none;
+    color: white;
+}
+.menulist-item a:hover{
+    color: rgb(63, 125, 32);
+}
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.5em;
+    height: 1.2em;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.profile{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#profile_picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile_details{
+    margin: 0 20px
+}
+.theme_switch{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.switcher{
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: black;
+    right: 1px;
+}
+.switch-color{
+    color: goldenrod;
+}
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    /* justify-content: space-evenly; */
+}
+.sidebar-icons{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 60px;
+    border: 4px solid black;
+    padding-bottom: 5px;
+}
+.sidebar-icons:hover{
+    /* border-bottom: yellow; */
+    border-bottom: 4px solid yellow;
+    cursor: pointer;
+}
+.container{
+    background-color: #151515;
+    height: calc(100vh - 50px);
+    color: white;
+}
+.content-container{
+    margin-left: 50px;
+    height: 90vh;
+}
+.featured-content{
+    height: 100%;
+    /* background-color: aquamarine; */
+}
+.carousel{
+    position: relative;
+    margin: 0 50px;
+    height: 80%;
+    transform: translateY(50px);
+    /* background-color: #151515; */
+}
+.carousel-track-container{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-track{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    transition: transform 350ms ease-in;
+}
+.carousel-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+.carousel-images{
+    float: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+}
+.carousel-left{
+    left: -25px;
+    color: white;
+}
+.carousel-right{
+    right: -25px;
+    color: white;
+}
+.carousel-right:hover{
+    cursor: pointer;
+}
+.carousel-left:hover{
+    cursor: pointer;
+}
+.carousel-navigator{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: darkgreen; */
+}
+.carousel-locator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 12px;
+    background: rgba(243, 239, 239, 0.2);
+}
+.carousel-locator:hover{
+    cursor: pointer;
+}
+.carousel-locator.current-image{
+    background: rgba(255, 255, 255, 0.6);
+}
+@media all and (max-width: 881px){
+    .toggle-button{
+        display: flex;
+    }
+    .logo{
+        font-size: 1.2em;
+    }
+    .menu{
+        flex: 0;
+    }
+    .menulist-item{
+        display: none;
+    }
+}
+@media all and (max-width: 550px){
+    .toggle-button{
+        display: flex;
+    }
+    .logo{
+        font-size: 1.2em;
+    }
+    .menu{
+        flex: 0;
+    }
+    .menulist-item{
+        display: none;
+    }
+    .profile{
+        flex: 0;
+        display: none;
+    }
+}
